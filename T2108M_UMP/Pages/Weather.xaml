@@ -8,7 +8,16 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <TextBlock x:Name="Temp" Text="Nhiệt độ HN"/>
-    </Grid>
+    <RelativePanel>
+        <TextBox x:Name="Temp" Text="Nhiệt độ HN" Width="134" Margin="5"/>
+        <TextBox x:Name="feels_like" RelativePanel.Below="Temp" Text="feels_like" Width="130" Margin="5"/>
+        <TextBox x:Name="temp_min" RelativePanel.Below="feels_like" Text="temp_min" Width="130" Margin="5"/>
+        <TextBox x:Name="temp_max" RelativePanel.Below="temp_min" Text="temp_max" Width="130" Margin="5"/>
+        <TextBox x:Name="pressure" RelativePanel.Below="temp_max" Text="pressure" Width="130" Margin="5"/>
+        <TextBox x:Name="sea_level" RelativePanel.Below="pressure" Text="sea_level" Width="130" Margin="5"/>
+        <TextBox x:Name="grnd_level" RelativePanel.Below="sea_level" Text="grnd_level" Width="130" Margin="5"/>
+        <TextBox x:Name="humidity" RelativePanel.Below="grnd_level" Text="humidity" Width="130" Margin="5"/>
+        <TextBox x:Name="temp_kf" RelativePanel.Below="humidity" Text="temp_kf" Width="130" Margin="5"/>
+    </RelativePanel>
 </Page>
+        

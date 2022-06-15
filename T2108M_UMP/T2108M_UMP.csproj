@@ -123,6 +123,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Module\CurentWeather.cs" />
+    <Compile Include="Module\ForeCastWeather.cs" />
     <Compile Include="Module\Student.cs" />
     <Compile Include="Pages\Account.xaml.cs">
       <DependentUpon>Account.xaml</DependentUpon>

@@ -1,10 +1,10 @@
-﻿/*using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace T2108M_UMP.Module
+namespace T2108M_UMP.Module.ForeCast
 {
     // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
     public class City
@@ -47,7 +47,7 @@ namespace T2108M_UMP.Module
     public class Main
     {
         public double temp { get; set; }
-        public double feelslike { get; set; }
+        public double feels_like { get; set; }
         public double temp_min { get; set; }
         public double temp_max { get; set; }
         public int pressure { get; set; }
@@ -62,7 +62,7 @@ namespace T2108M_UMP.Module
         public double _3h { get; set; }
     }
 
-    public class CurentWeather
+    public class ForeCastWeather
     {
         public string cod { get; set; }
         public int message { get; set; }
@@ -91,5 +91,4 @@ namespace T2108M_UMP.Module
         public double gust { get; set; }
     }
 
-
-}*/
+}

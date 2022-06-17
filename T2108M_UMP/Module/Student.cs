@@ -8,7 +8,7 @@ namespace T2108M_UMP.Module
 {
     class Student
     {
-        public int Id { get; set; }
+       public int Id { get; set; }
         public string Name { get; set; }
         public int Age { get; set; }
         public string Address { get; set; }

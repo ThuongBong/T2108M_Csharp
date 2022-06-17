@@ -1,12 +1,11 @@
-﻿/*using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace T2108M_UMP.Module
+namespace T2108M_UMP.Module.CurentWeather
 {
-    // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
     public class City
     {
         public int id { get; set; }
@@ -32,6 +31,8 @@ namespace T2108M_UMP.Module
 
     public class List
     {
+        public City city { get; set; }
+        public CurentWeather cr { get; set; }
         public int dt { get; set; }
         public Main main { get; set; }
         public List<Weather> weather { get; set; }
@@ -42,12 +43,22 @@ namespace T2108M_UMP.Module
         public Sys sys { get; set; }
         public string dt_txt { get; set; }
         public Rain rain { get; set; }
+
+        public string Desc { get => weather[0].description; }
+
+        public string img
+        {
+            get => "https://openweathermap.org/img/wn/" + weather[0].icon + "@2x.png";
+
+
+        }
+
     }
 
     public class Main
     {
         public double temp { get; set; }
-        public double feelslike { get; set; }
+        public double feels_like { get; set; }
         public double temp_min { get; set; }
         public double temp_max { get; set; }
         public int pressure { get; set; }
@@ -91,5 +102,4 @@ namespace T2108M_UMP.Module
         public double gust { get; set; }
     }
 
-
-}*/
+}

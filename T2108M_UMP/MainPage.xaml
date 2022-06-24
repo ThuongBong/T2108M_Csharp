@@ -41,6 +41,16 @@
                         <TextBlock Grid.Column="1" Text="Weather" Margin="10,8,0,0"/>
                     </Grid>
             </ListViewItem>
+            <ListViewItem Tapped="Student_Tapped" x:Name="Student" RelativePanel.Below="Weather" Margin="10">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <FontIcon Grid.Column="0" FontFamily="Segoe MDL2 Assets" Glyph="&#xE753;" Margin="10"/>
+                        <TextBlock Grid.Column="1" Text="Student" Margin="10,8,0,0"/>
+                    </Grid>
+            </ListViewItem>
             </RelativePanel>
         </SplitView.Pane>
         <SplitView.Content>

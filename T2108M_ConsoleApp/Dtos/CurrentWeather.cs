@@ -8,7 +8,7 @@ namespace T2108M_ConsoleApp.Dtos
 {
     public class Clouds
     {
-        public int all { get; set; }
+        public int all { get; set; } 
     }
 
     public class Coord

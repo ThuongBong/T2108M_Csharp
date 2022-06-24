@@ -19,7 +19,7 @@ namespace T2108M_UMP.Helper
         {
             string path = Path.Combine(ApplicationData.Current.LocalFolder.Path, dbName);
             SQLiteConnection = new SQLiteConnection(path);
-            var sql_txt = @"create table if not exists Student(Id interger primary key,
+            var sql_txt = @"create table if not exists Student(Id integer primary key,
                             Name varchar(255),Age integer, Address varchar(255))";
             var statement = SQLiteConnection.Prepare(sql_txt);
             statement.Step();

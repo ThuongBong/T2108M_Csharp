@@ -23,11 +23,16 @@ namespace T2108M_UMP
     /// </summary>
     public sealed partial class MainPage : Page
     {
+
+        public static Frame MainContent;
+
         
         public MainPage()
         {
             this.InitializeComponent();
+            MainFrame.Navigate(typeof(Pages.Home));
             SQLiteHelper sq = SQLiteHelper.GetInstance();
+            MainContent = MainFrame;
             
 
         }
@@ -49,6 +54,11 @@ namespace T2108M_UMP
         private void Weather_Tapped(object sender, TappedRoutedEventArgs e)
         {
             MainFrame.Navigate(typeof(Pages.Weather));
+        }
+
+        private void Student_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            MainFrame.Navigate(typeof(Pages.StudentList));
         }
     }
 }

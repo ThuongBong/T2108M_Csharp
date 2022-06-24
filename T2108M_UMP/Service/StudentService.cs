@@ -41,7 +41,7 @@ namespace T2108M_UMP.Service
 
         public void Create(Student s)
         {
-            string sql_txt = "insert into Student (Id,Name,Age,Address) value(?,?,?,?)";
+            string sql_txt = "insert into Student(Id,Name,Age,Address) values(?,?,?,?)";
             SQLiteHelper helper = SQLiteHelper.GetInstance();
             var statement = helper.SQLiteConnection.Prepare(sql_txt);
             statement.Bind(1, s.Id);
@@ -68,6 +68,7 @@ namespace T2108M_UMP.Service
             statement.Bind(1, s.Name);
             statement.Bind(2, s.Age);
             statement.Bind(3, s.Address);
+            statement.Bind(4, s.Id);
             statement.Step();
         }
     }
